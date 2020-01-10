@@ -7,10 +7,8 @@ services:
     image: postgres
     restart: always
     environment:
-      POSTGRES_PASSWORD: example
-
-  adminer:
-    image: adminer
-    restart: always
+      - POSTGRES_PASSWORD=qwerty123
+      - POSTGRES_USER=app
+      - POSTGRES_DB=postgres
     ports:
-      - 8080:8080
+      - 5432:5432
